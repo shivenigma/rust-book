@@ -10,13 +10,13 @@ fn main() {
         Ok(num) => num,
         Err(_) => panic!("Invalid number")
     };
-    let mut fib: i32 = 1;
-    let mut prev: i32 = 0;
-    while number > 1 {
-        let temp = prev;
-        prev = fib;
-        fib = temp + fib;
-        number = number - 1;
-    }
-    println!("The fibonacci number is {fib}");
+    println!("The fibonacci number is {}", fib(number));
+}
+
+fn fib(num: i32)-> i32 {
+    if num <= 0 {
+        return 0;
+    } else if num == 1 {
+        return 1;
+    } fib(num-1) + fib(num-2)
 }
