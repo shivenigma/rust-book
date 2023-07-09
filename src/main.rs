@@ -7,9 +7,8 @@ fn main() {
         width: 30,
         height: 20,
     };
-    let area = rect_area(rect);
-    println!("area of rect is {}", area);
+    println!("area of rect is {}", rect_area(&rect));
 }
-fn rect_area(rect: Rectangle) -> u32 {
-    return rect.width * rect.height;
+fn rect_area(rect: &Rectangle) -> u32 {
+    rect.width * rect.height
 }
